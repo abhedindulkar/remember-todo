@@ -1,13 +1,13 @@
 <template>
   <card>
     <div>
-      <label for="title"> Title </label>
+      <label for="title"> TITLE </label>
       <input type="text" v-model="title" />
-      <label for="description"> Description </label>
+      <label for="description"> DESCRIPTION </label>
       <input type="text" v-model="description" />
-      <label for="link"> Link </label>
+      <label for="link"> LINK </label>
       <input type="text" v-model="link" />
-      <button @click="addResource__self">Add Resources</button>
+      <button @click="addResource__self">ADD RESOURCE</button>
     </div>
     <dialog open v-if="showModal">
       <h1>{{ modalMessage }}</h1>
@@ -29,6 +29,7 @@ export default {
   },
 
   methods: {
+
     addResource__self() {
       if (this.title === '' || this.description === '' || this.link === '') {
         this.modalMessage = 'Input Cannot be empty';
@@ -65,11 +66,13 @@ export default {
 </script>
 <style scoped>
 dialog {
-  width: 50%;
+  width: 70%;
   height: auto;
   border-radius: 25px;
   box-shadow: 1px 1px 3px 1px #6c6c7b;
   border: none;
+  position: absolute;
+  top: 50%;
 }
 dialog h1 {
   text-align: center;

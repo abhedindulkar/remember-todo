@@ -6,7 +6,7 @@
         Stored Resources
       </button>
       <button :class="addResourceTab" @click="toggleTab('add-resource')">
-        Add Resources
+        Add Resource
       </button>
     </div>
   </card>
